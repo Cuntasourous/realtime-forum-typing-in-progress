@@ -1,0 +1,11 @@
+{
+    "server": {
+        "protocol": "http://",
+        "host": "localhost",
+        "port": 8080
+    },
+    "database": {
+        "path": "./internal/database/forumDB.db",
+        "schema": "./internal/database/db-schema.sql"
+    }
+}

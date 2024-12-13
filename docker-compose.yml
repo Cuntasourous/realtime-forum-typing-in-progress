@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./internal/database/forumDB.db:/app/internal/database/forumDB.db
+      - ./internal/config/config.json:/app/internal/config/config.json
+    environment:
+      - DB_CONNECTION_STRING=/app/internal/database/forumDB.db
