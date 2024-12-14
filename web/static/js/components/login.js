@@ -4,21 +4,24 @@ import { showToast } from "../app.js"; // Ensure showToast is correctly imported
 class LoginView {
   constructor() {
     this.view = `
+          <div class="flex">
+            <div class="banner">
+                <img src="/static/images/LOGO.png" width="150px" height="auto" alt="logo"/>
+            </div>
             <section class="auth-section">
-                <h1>Login</h1>
+                <h1>Enter Account</h1>
                 <form id="loginform">
                     <div class="form-group">
-                        <label for="username_email">Username/Email</label>
-                        <input type="text" id="username_email" name="username_email" required>
+                        <input type="text" id="username_email" name="username_email" placeholder="Username" required>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
                     </div>
-                    <button type="submit">Login</button>
+                    <button type="submit">Log In</button>
                     <p>Don't have an account? <a href="/signup">Sign Up</a></p>
                 </form>
             </section>
+          </div>
         `;
   }
 

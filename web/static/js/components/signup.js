@@ -4,49 +4,47 @@ import { showToast } from "../app.js"; // Ensure showToast is correctly imported
 class LoginView {
   constructor() {
     this.view = `
+              <div class="flex">
+            <div class="banner">
+                <img src="/static/images/LOGO.png" width="100px" height="auto" alt="logo"/>
+            </div>
             <section class="auth-section">
-            <h1>Sign Up</h1>
+            <h1>Create An Account</h1>
             <form id="signupForm">
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email Address" name="email" required>
                 </div>
                 <div class="form-group">
                   <div class="form-g">
-                    <label for="firstname">First name</label>
-                    <input class="form-g--input" type="text" id="firstname" name="firstname" required>
+                    <input class="form-g--input" type="text" id="firstname" placeholder="First Name" name="firstname" required>
                   </div>
                   <div class="form-g">
-                    <label class="form-g--label" for="lastname">Last name</label>
-                    <input class="form-g--input" type="text" id="lastname" name="lastname" required>
+                    <input class="form-g--input" type="text" id="lastname" placeholder="Last Name" name="lastname" required>
                   </div>
                 </div>  
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="number" id="age" name="age" placeholder="Age" required min="13" max="120">
                 </div>
                 <div class="form-group">
-                    <label for="age">Age</label>
-                    <input type="number" id="age" name="age" required min="13" max="120">
-                </div>
-                <div class="form-group">
-                    <label for="gender">Gender</label>
                     <select id="gender" name="gender">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="form-group">
-                    <label for="password-rep">Repeat Password</label>
-                    <input type="password" id="password-rep" name="password-rep" required>
+                    <input type="password" id="password-rep" name="password-rep" placeholder="Repeat Password" required>
                 </div>
                 <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="/login">Login</a></p>
             </form>
             </section>
+            </div>
         `;
   }
 
@@ -65,6 +63,7 @@ class LoginView {
           await handleSignup(event);
         } catch (error) {
           // Display any errors that occur in handleSignup as a toast
+          alert("signup failed. Try again")
           showToast(error.message || "Signup failed. Please try again.");
         }
       });

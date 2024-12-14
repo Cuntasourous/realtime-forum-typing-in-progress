@@ -19,12 +19,11 @@ class PostView {
                         <p id="content" class="content"></p> 
                 </div>
             </div>
-            <hr>
             <div class="comment-section">
                 <form id="addcomment">
                     <textarea name="content" rows="5" cols="50" maxlength="501" placeholder="Start typing here" required></textarea>
                     <br>
-                    <button type="submit" class="btn">Add comment</button>
+                    <button type="submit" class="btn">Post</button>
                 </form>
             </div>
         `;
@@ -95,19 +94,23 @@ class PostView {
       if (this.data.comments) {
         this.data.comments.forEach((comment) => {
           const commentCard = document.createElement("div");
-          commentCard.className = "post-card";
+          commentCard.className = "comment-single";
           commentCard.innerHTML = `
-                <div class="post-meta">
-                    <p class="user">${comment.username}</p>
-                </div>
-                <p class="date" style="margin-bottom: 15px;">${comment.created_at}</p>
-                <p class="content">${comment.content}</p>
-                <div class="interaction">
-                  <button id=${comment.id} class="like-button"></button>
-                  <span class="like-count">${comment.likes}</span>
-                  <button id=${comment.id} class="dislike-button"></button>
-                  <span class="dislike-count">${comment.dislikes}</span>
-                </div>
+              <div class="line"></div>
+              <div class="comment-card">
+                    <div class="post-meta">
+                        <p class="user">${comment.username}</p>
+                    </div>
+                    <p class="date" style="margin-bottom: 15px;">${comment.created_at}</p>
+                    <p class="content">${comment.content}</p> 
+                    <div class="interaction">
+                      <button id=${comment.id} class="like-button"></button>
+                      <span class="like-count">${comment.likes}</span>
+                      <button id=${comment.id} class="dislike-button"></button>
+                      <span class="dislike-count">${comment.dislikes}</span>
+                    </div>
+              </div>
+            </div>
             `;
           root.appendChild(commentCard);
         });

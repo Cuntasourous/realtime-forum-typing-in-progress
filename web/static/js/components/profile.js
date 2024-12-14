@@ -48,6 +48,7 @@ class ProfileView {
                   <span class="label">Gender</span>
                   <span class="value">${userInfo.gender}</span>
                 </div>
+                <a href="/logout" id="logoutLink">Logout</a>
               </div>
             </div>
           </div>

@@ -6,12 +6,14 @@ export function updateNavbar() {
   const nav = document.getElementById("nav")
   if (nav) {
     if (sessionData.id === 0) {
-      nav.innerHTML = `
+      nav.innerHTML = `<!--
             <ul>
                 <li><a href="/">Home</a></li>
-                <li class="right"><a href="/login" id="loginLink">Login</a></li>
-                <li class="right"><a href="/signup" id="signupLink">Sign Up</a></li>
-            </ul>
+                <div class="right-nav">
+                  <li><a href="/login" id="loginLink">Login</a></li>
+                  <li><a href="/signup" id="signupLink">Sign Up</a></li>
+                </div>
+            </ul> -->
             `
     } else if (sessionData.id !== 0) {
       if (window.location.pathname === "/") {
@@ -20,7 +22,9 @@ export function updateNavbar() {
                 <li><a href="/">Home</a></li>
                 <li><a href="/postform" id="createLink">Create Post</a></li>
                 <li><a href="" id="filterLink">Filter</a></li>
+                <!--
                 <li class="right"><a href="/logout" id="logoutLink">Logout</a></li>
+                -->
                 <li class="right username" id="username-p">${sessionData.username}</li>
             </ul>
             `
@@ -29,7 +33,9 @@ export function updateNavbar() {
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/postform" id="createLink">Create Post</a></li>
+                <!--
                 <li class="right"><a href="/logout" id="logoutLink">Logout</a></li>
+                -->
                 <li class="right username" id="username-p">${sessionData.username}</li>
             </ul>
             `

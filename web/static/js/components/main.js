@@ -70,9 +70,9 @@ class MainView {
       let intDiv = document.createElement("div")
       intDiv.classList.add("interaction")
 
-      let commentButton = document.createElement("a")
-      commentButton.href = `/postid=${post.id}`
-      commentButton.classList.add("button", "comment-button")
+      // let commentButton = document.createElement("a")
+      // commentButton.href = `/postid=${post.id}`
+      // commentButton.classList.add("button", "comment-button")
       // commentButton.innerText = "Add comment"
 
       let likeButton = document.createElement("button")
@@ -99,7 +99,7 @@ class MainView {
       postDiv.appendChild(postMeta)
       postDiv.appendChild(categoriesDiv)
       postDiv.appendChild(content)
-      intDiv.appendChild(commentButton)
+      // intDiv.appendChild(commentButton)
       intDiv.appendChild(likeButton)
       intDiv.appendChild(likeCount)
       intDiv.appendChild(dislikeButton)

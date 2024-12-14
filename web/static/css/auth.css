@@ -2,10 +2,7 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .auth-section h1 {
@@ -32,6 +29,13 @@
     box-sizing: border-box;
 }
 
+.banner{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .auth-section .form-group .form-g .form-g--label {
     text-align: right;
 }
@@ -45,26 +49,35 @@
 
 .auth-section .form-group input {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 15px 5px 15px 20px;
+    border: none;
+    /* border: 1px solid #ccc; */
     border-radius: 4px;
     box-sizing: border-box;
+    outline: none;
+    background-color: #EBEEED;
+    font-size: 15px;
 }
 
 
 .auth-section button {
     width: 100%;
     padding: 10px;
-    background-color: #f97316;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    color: #EF9083;
+    border: #EF9083 solid 2px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 .auth-section button:hover {
-    background-color: #d76615;
+    background-color: #EF9083;
+    color: white;
+
 }
 
 .auth-section p {
