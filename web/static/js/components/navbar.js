@@ -20,8 +20,12 @@ export function updateNavbar() {
         nav.innerHTML = `
             <ul>
                 <li><a href="/">Home</a></li>
+                <!--
                 <li><a href="/postform" id="createLink">Create Post</a></li>
+                -->
+                <!--
                 <li><a href="" id="filterLink">Filter</a></li>
+                -->
                 <!--
                 <li class="right"><a href="/logout" id="logoutLink">Logout</a></li>
                 -->
@@ -32,7 +36,9 @@ export function updateNavbar() {
         nav.innerHTML = `
             <ul>
                 <li><a href="/">Home</a></li>
+                <!--
                 <li><a href="/postform" id="createLink">Create Post</a></li>
+                -->
                 <!--
                 <li class="right"><a href="/logout" id="logoutLink">Logout</a></li>
                 -->

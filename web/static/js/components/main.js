@@ -1,4 +1,5 @@
 import { getPosts, handleLike } from "../api/data-api.js"
+import FilterComponent from "./filter.js"
 
 class MainView {
   constructor(data = {}) {
@@ -25,6 +26,51 @@ class MainView {
     console.log("rendering main view")
     let root = document.getElementById("root")
     root.innerHTML = ""
+    let bannerDiv = document.createElement("div")
+    bannerDiv.classList.add("banner")
+
+    // Create the "Create Post" link
+    let createPostLink = document.createElement("a")
+    createPostLink.href = "/postform"
+    createPostLink.id = "createLink"
+    createPostLink.innerText = "Create Post"
+    bannerDiv.appendChild(createPostLink)
+
+    // Create the filter button
+    let filterButton = document.createElement("a");
+    filterButton.href = ""
+    filterButton.innerText = "Filter";
+    filterButton.id = "filterLink"
+    filterButton.addEventListener("click", () => {
+      filterComponent.showFilter();
+    });
+    bannerDiv.appendChild(filterButton);
+
+    root.appendChild(bannerDiv);
+
+    const filterlink = document.getElementById("filterLink")
+    const filterContainer = document.getElementById("filterContainer")
+    if (filterContainer) {
+      filterContainer.style.display = "none"
+    }
+    let filterState = false
+    if (filterlink) {
+      const filterComponent = new FilterComponent()
+      filterlink.addEventListener("click", (event) => {
+        event.preventDefault()
+        if (filterState) {
+          console.log("hide filter")
+          filterComponent.hideFilter()
+          filterState = !filterState
+        } else {
+          console.log("show filter")
+          filterComponent.showFilter()
+          filterState = !filterState
+        }
+      })
+    }
+    
+    //posts
     let section = document.createElement("section")
     section.classList.add("posts-section")
     root.appendChild(section)
