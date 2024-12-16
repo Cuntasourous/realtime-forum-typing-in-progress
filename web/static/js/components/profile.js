@@ -1,5 +1,14 @@
 import { handleUser } from "../api/data-api.js"
+import { handleLogout } from "../api/auth-api.js"
 
+  const logoutLink = document.getElementById("logoutLink")
+  if (logoutLink) {
+    logoutLink.addEventListener("click", (event) => {
+      handleLogout(event).then(() => {
+        window.app.router.go("/")
+      })
+    })
+  }
 class ProfileView {
   constructor() {
     this.sessionData = JSON.parse(localStorage.getItem("sessionData"))
@@ -58,6 +67,7 @@ class ProfileView {
         console.log(err)
       })
   }
+  
 
   init() {}
 }

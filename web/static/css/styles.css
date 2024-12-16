@@ -134,6 +134,7 @@ nav ul li a:hover {
     padding: 15px 2vw 5px 2vw;
     width: 46vw;
     margin-top: 20px;
+    margin-left: 100px;
 
     /* background-color: var(--color-soft-gray);
     border: 1px solid var(--color-border);
@@ -145,6 +146,7 @@ nav ul li a:hover {
 
 .comment-single{
     display: flex;
+    margin-left: 100px;
 }
 
 .comment-card{
@@ -157,6 +159,7 @@ nav ul li a:hover {
     padding: 20px 10px 15px 20px;
     width: 500px;
     border: #cac2ca63 solid 1px;
+    margin-left: 100px;
 }
 
 .comment-card .user{
@@ -383,6 +386,7 @@ nav ul li a:hover {
     margin-top: -17px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     width: 50vw;
+    margin-left: 100px;
 }
 
 .comment-section form{
@@ -540,7 +544,6 @@ select {
 
 .container {
     width: 100vw;
-    padding-left: 100px;
 }
 
 #title {

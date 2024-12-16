@@ -39,9 +39,7 @@ export function updateNavbar() {
                 <!--
                 <li><a href="/postform" id="createLink">Create Post</a></li>
                 -->
-                <!--
                 <li class="right"><a href="/logout" id="logoutLink">Logout</a></li>
-                -->
                 <li class="right username" id="username-p">${sessionData.username}</li>
             </ul>
             `
