@@ -1,6 +1,6 @@
 .profile-container {
     padding: 40px 20px;
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -36,6 +36,51 @@
     color: var(--color-primary);
     margin: 0;
     font-size: 24px;
+    margin-bottom: -5px;
+}
+
+.profile-header h4 {
+    text-transform: uppercase;
+    color: #EB857A;
+    margin: 0;
+    margin-top: -10px;
+    font-size: 12px;
+}
+
+.profile-header p {
+    margin: 0;
+    padding:0;
+    color: #B4B3B4;
+}
+
+.profile-header a {
+    display: inline-block; /* Make the link behave like a block element */
+    padding: 10px 20px; /* Add some padding */
+    background-color: white; /* Button background color */
+    color: #EB857A; /* Text color */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    border: 2px solid #EB857A; /* Border color */
+    border-radius: 30px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Transition effects */
+    width: 70%;
+}
+
+.profile-header a:hover {
+    background-color: #EB857A; /* Darker background on hover */
+    color: white; /* Keep text color white */
+  }
+
+.bordered{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+.bordered p{
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .profile-info {

@@ -15,6 +15,8 @@
     --color-soft-green: #22c55e;
     --color-soft-gray: #f2f2f2;
 
+    --padding-100px: 100px;
+
     /* Font family variable */
     /* --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; */
 }
@@ -90,10 +92,9 @@ nav ul li a:hover {
 
 /* Additional styles for index.html */
 #filterContainer {
-    background-color: #606d80;
     padding: 20px;
     margin-bottom: 20px;
-    color: var(--color-text-2);
+    padding-left: 100px;
 }
 
 #filterContainer form div {
@@ -112,10 +113,12 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    font-family: 'sora';
+    transition: all 0.3s ease;
 }
 
 #filterContainer button:hover {
-    background-color: #de6814;
+    background-color: #DF6958;;
 }
 
 .posts-section {
@@ -134,7 +137,7 @@ nav ul li a:hover {
     padding: 15px 2vw 5px 2vw;
     width: 46vw;
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: var(--padding-100px);
 
     /* background-color: var(--color-soft-gray);
     border: 1px solid var(--color-border);
@@ -146,7 +149,7 @@ nav ul li a:hover {
 
 .comment-single{
     display: flex;
-    margin-left: 100px;
+    margin-left: var(--padding-100px);
 }
 
 .comment-card{
@@ -159,7 +162,7 @@ nav ul li a:hover {
     padding: 20px 10px 15px 20px;
     width: 500px;
     border: #cac2ca63 solid 1px;
-    margin-left: 100px;
+    margin-left: var(--padding-100px);
 }
 
 .comment-card .user{
@@ -377,6 +380,37 @@ nav ul li a:hover {
     box-shadow: var(--shadow);
 } */
 
+.banner{
+    padding-left: var(--padding-100px);
+}
+
+.banner a{
+    margin-left: 10px;
+    display: inline-block; /* Make the link behave like a block element */
+    padding: 10px 20px; /* Add some padding */
+    background-color: #DA8073; /* Button background color */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    border: 2px solid #DA8073; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Transition effects */
+}
+
+.banner a:hover {
+    background-color: #DF6958; /* Button background color on hover */
+    color: white; /* Text color on hover */
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.flex img{
+    margin-right: 20px;
+}
+
 .comment-section{
     display: flex;
     border-top: #cac2ca63 solid 1px;
@@ -386,7 +420,7 @@ nav ul li a:hover {
     margin-top: -17px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     width: 50vw;
-    margin-left: 100px;
+    margin-left: var(--padding-100px);
 }
 
 .comment-section form{
@@ -429,6 +463,8 @@ nav ul li a:hover {
     font-weight: bold;
     margin-top: 10px;
     transition: background-color 0.3s ease;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 .btn:hover {
@@ -449,22 +485,27 @@ nav ul li a:hover {
 .form-group label {
     margin-right: 5px;
     white-space: nowrap;
-    font-weight: 600;
 }
 
 .form-group textarea {
     flex: 1;
-    min-height: 40px;
+    min-height: 20px;
     resize: none;
     border-radius: 4px;
-    border: 1px solid #c6c6c6;
+    /* border: 1px solid #c6c6c6; */
     text-indent: 10px;
+    border: none;
+    outline: none;
+    font-family: 'Sora';
 }
 
 .lns-checkbox {
     color: #374151;
 }
 
+.posts-section h1{
+    margin-left: var(--padding-100px);
+}
 .post-link {
     text-decoration: none;
     color: inherit;
@@ -549,7 +590,10 @@ select {
 #title {
     width: 400px;
     border-radius: 4px;
-    border: 1px solid #c6c6c6;
+    /* border: 1px solid #c6c6c6; */
+    border: none;
+    outline: none;
+    font-family: 'Sora';
 }
 
 .username {
@@ -614,6 +658,6 @@ select {
     max-height: 70vh; /* Set the maximum height as a percentage of the viewport height */
     overflow-y: auto; /* Add a vertical scrollbar when content overflows */
     padding: 10px; /* Optional: Add padding for a better appearance */
-    border: 1px solid #ddd; /* Optional: Add a border around the user list */
+    /* border: 1px solid #ddd; */
     box-sizing: border-box; /* Ensures padding doesn’t increase the total width/height */
   }

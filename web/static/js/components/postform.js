@@ -11,17 +11,19 @@ class PostFormView {
           <div class="post-card">
             <form id="postform">
               <div class="form-group">
-                <label for="title">Title</label>
-                <input class="inp" name="title" id="title" maxlength="101" required></input>
+                <div class="flex">
+                <img src="/static/images/pfp.png" alt="pfp image" class="pfp-img" width="50px" height="50px">
+                    <input class="inp" name="title" id="title" maxlength="101" placeholder="Title" required></input>
+                </div>
               </div>
               <br>
               <div class="form-group">
-                <label for="content">Content</label>
-                <textarea name="content" id="content" rows="10" maxlength="2001" required></textarea>
+                <textarea name="content" id="content" rows="10" maxlength="2001" placeholder="What is on your mind today" required></textarea>
               </div>
               <br>
+              <label>Categories:</label>
+              <br>
               <div class="form-group">
-                <label>Categories:</label>
                 ${this.categories
                   .map(
                     (category) => `
@@ -33,7 +35,7 @@ class PostFormView {
                   )
                   .join("")}
               </div>
-              <button class="btn" type="submit">Submit</button>
+              <button class="btn" type="submit" style="margin-top: 30px;">Submit</button>
             </form>
           </div>
         </section>

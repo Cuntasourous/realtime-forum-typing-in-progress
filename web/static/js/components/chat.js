@@ -291,9 +291,11 @@ class Chat {
         <div class="message-content">
           ${message.content}
         </div>
+        <!--
         <div class="message-time">
           ${message.created_at || new Date().toLocaleTimeString()}
         </div>
+        -->
       `
       return messageElement
     })

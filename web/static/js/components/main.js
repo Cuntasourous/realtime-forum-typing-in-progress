@@ -37,7 +37,7 @@ class MainView {
     let createPostLink = document.createElement("a");
     createPostLink.href = "/postform";
     createPostLink.id = "createLink";
-    createPostLink.innerText = "Create Post";
+    createPostLink.innerText = " +  Create Post";
     bannerDiv.appendChild(createPostLink);
 
     // Create the filter button

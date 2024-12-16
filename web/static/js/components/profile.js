@@ -32,32 +32,24 @@ class ProfileView {
             <div class="profile-card">
               <div class="profile-header">
                 <div class="profile-avatar">
-                  ${this.getInitials(userInfo.firstname, userInfo.lastname)}
+                <img src="/static/images/pfp.png" alt="pfp image" class="pfp-img" width="150px" height="150px">
                 </div>
                 <h2>${userInfo.username}</h2>
-              </div>
-              <div class="profile-info">
-                <div class="info-row">
-                  <span class="label">Email</span>
-                  <span class="value">${userInfo.email}</span>
-                </div>
-                <div class="info-row">
-                  <span class="label">First Name</span>
-                  <span class="value">${userInfo.firstname}</span>
-                </div>
-                <div class="info-row">
-                  <span class="label">Last Name</span>
-                  <span class="value">${userInfo.lastname}</span>
-                </div>
-                <div class="info-row">
-                  <span class="label">Age</span>
-                  <span class="value">${userInfo.age}</span>
-                </div>
-                <div class="info-row">
-                  <span class="label">Gender</span>
-                  <span class="value">${userInfo.gender}</span>
-                </div>
+                <p>${userInfo.email}</p>
+                <br>
+                <h4>FULL NAME</h4>
+                <p>${userInfo.firstname} ${userInfo.lastname}</p>
+                                <br>
+                <h4>AGE</h4>
+                <p>${userInfo.age}</p>
+                                <br>
+                <h4>GENDER</h4>
+                <p>${userInfo.gender}</p>
+                <br>
+                <!--
                 <a href="/logout" id="logoutLink">Logout</a>
+                -->
+              </div>
               </div>
             </div>
           </div>
