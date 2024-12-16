@@ -31,7 +31,8 @@ body {
 }
 
 .nav {
-    background-color: var(--color-accent);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 nav ul {
@@ -60,15 +61,15 @@ nav ul li a {
     display: block;
     padding: 8px;
     text-decoration: none;
-    color: var(--color-text-2);
+    color: #DF6958;
 }
 
-nav ul li a:hover {
+/* nav ul li a:hover {
     text-decoration: underline;
     text-underline-offset: 8px;
     text-decoration-color: var(--color-secondary);
     text-decoration-thickness: 2px;
-}
+} */
 
 
 .large-header {
@@ -597,17 +598,22 @@ select {
 }
 
 .username {
-    color: var(--color-text-2);
+    color: #DF6958;
     margin-top: 8px;
 }
 
 .username:hover {
-    background-color: #515e74;
+    /* background-color: #515e74;
     border: 1px solid #73829b;
-    border-radius: 25px;
+    border-radius: 25px; */
     cursor: pointer;
 }
 
+.banner2{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
 
 @media (max-width: 768px) {
     .container {

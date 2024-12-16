@@ -8,7 +8,7 @@ export function updateNavbar() {
     if (sessionData.id === 0) {
       nav.innerHTML = `<!--
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/"><img src="/static/images/LOGO.png" width="50px" height="auto" alt="logo"/></a></li>
                 <div class="right-nav">
                   <li><a href="/login" id="loginLink">Login</a></li>
                   <li><a href="/signup" id="signupLink">Sign Up</a></li>
@@ -19,7 +19,7 @@ export function updateNavbar() {
       if (window.location.pathname === "/") {
         nav.innerHTML = `
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/"><img src="/static/images/LOGO.png" width="50px" height="auto" alt="logo"/></a></li>
                 <!--
                 <li><a href="/postform" id="createLink">Create Post</a></li>
                 -->
@@ -35,7 +35,7 @@ export function updateNavbar() {
       } else {
         nav.innerHTML = `
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/"><img src="/static/images/LOGO.png" width="50px" height="auto" alt="logo"/></a></li>
                 <!--
                 <li><a href="/postform" id="createLink">Create Post</a></li>
                 -->
