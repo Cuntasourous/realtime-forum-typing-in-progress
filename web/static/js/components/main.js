@@ -6,7 +6,6 @@ class MainView {
     console.log("posts for main view: ", data);
     this.data;
     if (data && data.posts) {
-      // posts from filter params
       this.data = data;
       console.log("posts of this.data: ", this.data);
       this.render();
@@ -27,8 +26,12 @@ class MainView {
     let root = document.getElementById("root");
     root.innerHTML = "";
 
-    // Use the existing banner
+    // Show the existing banner
     let bannerDiv = document.querySelector(".banner");
+    if (bannerDiv) {
+      bannerDiv.style.display = "block"; // Show the banner
+      bannerDiv.innerHTML = ''; // Clear previous contents
+    }
 
     // Create the "Create Post" link
     let createPostLink = document.createElement("a");
@@ -142,6 +145,7 @@ class MainView {
   }
 
   init() {
+    // Like and dislike button functionality
     const likeButtons = document.querySelectorAll(".like-button");
     const dislikeButtons = document.querySelectorAll(".dislike-button");
     likeButtons.forEach((button) => {
@@ -161,6 +165,7 @@ class MainView {
         });
       });
     });
+
     dislikeButtons.forEach((button) => {
       button.addEventListener("click", (event) => {
         event.preventDefault();

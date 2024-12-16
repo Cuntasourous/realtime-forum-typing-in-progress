@@ -66,6 +66,19 @@ class ProfileView {
       .catch((err) => {
         console.log(err)
       })
+
+      // Hide the existing banner
+      const banner = document.querySelector(".banner");
+      if (banner) {
+        banner.style.display = "none";
+      }
+
+          // Hide the chat element
+    const chat = document.getElementById("chat");
+    if (chat) {
+      chat.style.display = "none"; // Hide the chat element
+    }
+
   }
   
 

@@ -45,6 +45,12 @@ class PostFormView {
     if (root) {
       root.innerHTML = this.view;
     }
+    // Hide the existing banner
+    const banner = document.querySelector(".banner");
+    if (banner) {
+      banner.style.display = "none";
+    }
+
     this.init();
   }
 
