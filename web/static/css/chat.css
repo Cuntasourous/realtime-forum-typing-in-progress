@@ -219,3 +219,12 @@
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+@media (max-width: 768px) {
+    .chat-container{
+        width: 150px;
+    }
+    .chat-modal {
+        right: 0px;
+    }
+}
