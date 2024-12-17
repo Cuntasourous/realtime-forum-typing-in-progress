@@ -21,11 +21,18 @@ export function showToast(message) {
   const toastMessage = document.getElementById("toast-message");
 
   toastMessage.textContent = message;
-  toast.style.display = "block";
 
-  // Hide toast after 3 seconds
+  // Reset styles to start animation
+  toast.style.display = "block"; // Make it visible first
+  toast.classList.remove("fade-out"); // Ensure fade-out class is removed
+
+  // Set a timeout to trigger fade-out after 3 seconds
   setTimeout(() => {
-      toast.style.display = "none";
-  }, 3000);
-}
+      toast.classList.add("fade-out"); // Add class to trigger fade-out
+  }, 3000); // Duration toast stays visible
 
+  // Hide toast completely after the animation ends
+  setTimeout(() => {
+      toast.style.display = "none"; // Hide the toast from the DOM
+  }, 3500); // Match this duration to the CSS transition time
+}

@@ -521,9 +521,11 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--color-text-2);
+    color: black;
     padding: 10px;
     font-size: 25px;
+    background-color: white !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .error-container h1 {
@@ -619,17 +621,28 @@ select {
 .toast {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
+    right: -300px; /* Start off-screen */
+    background-color: white;
+    color: black;
     padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     font-size: 14px;
     z-index: 1000;
     opacity: 0.9;
-    transition: opacity 0.3s ease;
+    border-left: 6px solid #d03838;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 20vw;
+    animation: slideIn 0.5s forwards, fadeOut 0.5s forwards; /* Animation */
 }
+
+@keyframes slideIn {
+    from {
+        right: -300px; /* Start off-screen */
+    }
+    to {
+        right: 20px; /* End position */
+    }
+}
+
 
 
 .center-404 {
@@ -659,6 +672,9 @@ select {
     }
     #title{
         width: 200px;
+    }
+    .toast{
+        width: 40vw;
     }
 }
 
@@ -734,5 +750,8 @@ select {
     }
     #title{
         width: 200px;
+    }
+    .toast{
+        width: 50vw;
     }
 }

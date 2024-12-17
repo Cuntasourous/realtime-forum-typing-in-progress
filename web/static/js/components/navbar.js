@@ -26,9 +26,7 @@ export function updateNavbar() {
                 <!--
                 <li><a href="" id="filterLink">Filter</a></li>
                 -->
-                <!--
                 <li class="right"><a href="/logout" id="logoutLink">Logout</a></li>
-                -->
                 <li class="right username" id="username-p">${sessionData.username}</li>
             </ul>
             `
